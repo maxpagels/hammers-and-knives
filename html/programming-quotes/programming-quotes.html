@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Programming Quotes</title>
+  <link href='http://fonts.googleapis.com/css?family=Gentium+Basic:400italic' rel='stylesheet' type='text/css'>
+  <script type="text/javascript">
+  function generateQuote() {
+    
+    var quotes = ["There are two ways of constructing a software design: One way is to make it so simple that there are obviously no deficiencies and the other way is to make it so complicated that there  are no obvious deficiencies.",
+                  "The computing scientist's main challenge is not to get confused by the complexities of his own making.",
+                  "The cheapest, fastest, and most reliable components are those that aren't there.",
+                  "When in doubt, use brute force.",
+                  "Simplicity is prerequisite for reliability.",
+                  "Deleted code is debugged code.",
+                  "It's not that Perl programmers are idiots, it's that the language rewards idiotic behavior in a way that no other language or tool has ever done.",
+                  "The key to performance is elegance, not battalions of special cases.",
+                  "A computer is a stupid machine with the ability to do incredibly smart things, while computer programmers are smart people with the ability to do incredibly stupid things. They are, in short, a perfect match",
+                  "Code never lies, comments sometimes do.",
+                  "Simplicity carried to the extreme becomes elegance.",
+                  "You're bound to be unhappy if you optimize everything.",
+                  "The proper use of comments is to compensate for our failure to express ourself in code.",
+                  "The primary duty of an exception handler is to get the error out of the lap of the programmer and into the surprised face of the user. Provided you keep this cardinal rule in mind, you can't go far wrong."];
+    
+    var randomIndex = Math.floor(Math.random() * quotes.length);
+    var el = document.getElementById('quote');
+    
+    el.innerHTML = quotes[randomIndex];
+  }
+</script>
+<style type="text/css">
+
+  body, html {
+    padding: 0;
+    margin: 0;
+    display: table;
+    width: 100%;
+    height: 100%;
+  }
+
+  #quote {
+    font-family: 'Gentium Basic', serif;
+    font-style: italic;
+    font-size: 5vh;
+    color: #888;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 0 10%;
+    text-align: center;
+  }
+
+</style>
+</head>
+<body onload="generateQuote();">
+  <div id="quote">This is a quote</div>
+</body>
+</html>
