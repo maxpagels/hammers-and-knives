@@ -1,5 +1,5 @@
 # This script reads a CSV and generates
-# 0-N CSV files based on a given column name (passed as second paramter)
+# 0-N CSV files based on a given column name (passed as second parameter)
 
 import csv
 import sys
@@ -21,7 +21,6 @@ def removeInvalidChars(filename):
     return ''.join(c for c in cleanedFilename.decode("ascii") if c in validChars)
 
 csv.register_dialect('dial', delimiter=sys.argv[3], quoting=csv.QUOTE_ALL)
-
 
 splitby = sys.argv[2]
 encountered_values = {}
